@@ -12,12 +12,13 @@
     <title>BookList</title>
     <style>
         .event-schedule-area-two .tab-content .table thead {
-            background-color: #d11e1e;
+            background-color: #918af7;
             color: #fff;
             font-size: 18px;
-            height: 100px;
-            
+            height: 100%;
+            width: 100%
         }
+
         .event-schedule-area-two .tab-content .table tbody tr th {
             border: 0;
             /* padding: 30px 20px; */
@@ -39,7 +40,7 @@
         .event-schedule-area-two .tab-content .table tbody tr td .event-wrap h3 a {
             font-size: 20px;
             line-height: 20px;
-            color: #05cfad;
+            color: #ad4c13;
             -webkit-transition: all 0.4s;
             -o-transition: all 0.4s;
             transition: all 0.4s;
@@ -49,15 +50,15 @@
             display: -webkit-inline-box;
             display: -ms-inline-flexbox;
             display: inline-flex;
-            margin: 10px 0;
+            margin: 20px 0;
         }
 
         .event-schedule-area-two .tab-content .table tbody tr td .event-img img {
-            width: 80px;
-            height: 150px;
-            border-radius: 16px;
+            width: 120%;
+            height: 120%;
+            border-radius: 36px;
+            padding: 3px
         }
-
         .ozetortala {
             height: 102px;
             display: flex;
@@ -70,7 +71,7 @@
 </head>
 
 <body>
-    <div class="event-schedule-area-two bg-color pad100">
+    <div class="event-schedule-area-two bg-color pad200">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -82,9 +83,9 @@
                 <div class="col-lg-12">
                     <div class="tab-content" id="myTabContent">
                         <div class="table-responsive">
-                            <table class="table">
+                            <table class="table" style="font-size:medium">
                                 <thead>
-                                    <tr>
+                                    <tr style="vertical-align:baseline;">
                                         <th style="text-align: center" scope="col">
                                             <div class="ozetortala"> Sayfa Sayısı</div>
                                         </th>
@@ -103,10 +104,10 @@
                                                 href="{{ route('addbook') }}">Yeni Kitap Ekle</a>
                                             <form action="{{ route('logout') }}" method="POST">
                                                 {{ csrf_field() }}
-                                                <button class="btn btn-secondary" style="background: #d11e1e"
+                                                <button class="btn btn-secondary" style="background: #918af7"
                                                     type="submit">Çıkış Yap</button>
                                             </form>
-                                        </th>    
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -144,7 +145,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <div class="primary-btn" style="text-align: center">
+                                                <div class="primary-btn" style="text-align: center;">
                                                     <a class="btn btn-info"
                                                         href="{{ 'show/' . $book['id'] }}">Düzenle</a>
                                                 </div>

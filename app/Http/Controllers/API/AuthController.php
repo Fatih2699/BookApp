@@ -32,7 +32,7 @@ class AuthController extends Controller
     }
     public function login(Request $request)
     {
-        $request = validate([
+        $request = validator([
             'name' => 'required',
             'name' => 'email',
             'remember' => 'boolean',
@@ -43,7 +43,8 @@ class AuthController extends Controller
             return response()->json([
                 'message' => 'Unauthorized'
             ], 401);
-        $user = $request->user();
+        $user = $request->auth->user();
+        //$user = $request->user();
         $tokenResult = $user->createToken('Personal Access Token');
         $token = $tokenResult->token;
 

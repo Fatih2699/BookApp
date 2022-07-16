@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\BookController;
+use App\Http\Controllers\API\PhoneController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\RegisterController;
 use App\Http\Controllers\API\UserController;
@@ -29,3 +30,10 @@ Route::group(['middleware'=>['auth:api']],function(){
 
     Route::post("user",[UserController::class,'update'])->name('update');
 });
+
+//PHONE 
+Route::post("phone",[PhoneController::class,'create']);
+Route::get('phone',[PhoneController::class,'getList']);
+Route::post('phonetest',[PhoneController::class,'postLastDatas']);
+
+

@@ -47,10 +47,6 @@ class BookController extends BaseController
             $path = $request->file('image_url')->store('books');
             $input['image_url'] = $path;
         }
-        // if ($request->hasFile('UploadedFile')) {
-        //     $path = $request->file('UploadedFile')->store('books');
-        //     $input['image_url'] = $path;
-        // }
         $result = $book->update($input);
         if ($result) {
             $success['success'] = true;

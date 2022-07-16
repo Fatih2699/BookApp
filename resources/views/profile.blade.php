@@ -122,8 +122,8 @@
                             </div>
                             <div class="about">
                                 <h5>Hakkında</h5>
-                                <p>I'm Yuki. Full Stack Designer I enjoy creating user-centric, delightful and human
-                                    experiences.</p>
+                                <p> Benim adım Arif, al şu parayı, Arif abim bi' kalıp beyaz peynir, biraz zeytin, bir
+                                    ekmek, bir de tuvalet kağıdı istiyor de. Al yaaa</p>
                             </div>
                         </div>
                     </div>
@@ -171,13 +171,13 @@
                                     <br>
                                     </form>
                                 </div>
-                                <form action="{{route('logout')}}" method = "POST">
+                                <form action="{{ route('logout') }}" method="POST">
                                     @csrf
                                     <div class="primary-btn" style="position: fixed">
                                         <button class="btn btn-secondary" style="background: #d11e1e"
-                                        type="submit">Çıkış Yap</button>
+                                            type="submit">Çıkış Yap</button>
                                     </div>
-                                    </form>
+                                </form>
                                 <br>
                             </div>
                         </div>

@@ -92,5 +92,5 @@ class ProductController extends BaseController
     {
         $product->delete();
         return $this->sendResponse([], 'Product deleted successfully.');
-    }
+    } 
 }
